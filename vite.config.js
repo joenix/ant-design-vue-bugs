@@ -3,11 +3,16 @@ import vue from '@vitejs/plugin-vue';
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/ant-design-vue-bugs/',
+
   server: {
     // host: '127.0.0.1',
     host: '0.0.0.0',
     port: 4088,
-    base: '/ant-design-vue-bugs/',
+  },
+
+  build: {
+    outDir: 'docs',
   },
 
   plugins: [vue()],
